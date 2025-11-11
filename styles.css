@@ -1,3 +1,8 @@
+/*
+---
+Start Default Styling: bypass browser default and set page's sizings
+---
+*/
 html{
     height: 100dvh;
     width: 100dvw;
@@ -9,8 +14,19 @@ body {
     padding: 0;
     box-sizing: content-box;
     font-family: Courier, monospace;
-    text-wrap: wrap;
+    overflow-x: hidden;
 }
+/*
+---
+End Default Styling
+---
+*/
+
+/*
+---
+Main Section: Styling of main section including including header and introduction banner
+---
+*/
 header {
     height: 10%;
     width: 100%;
@@ -34,27 +50,24 @@ ul {
     list-style: none;
     gap: 10%;
 }
-.nav a ,.start > a{
+a{
     text-decoration: none;
     color: #000000;
 }
 main {
     display: flex;
     flex-direction: column;
-    height: 70vh;
-    gap: 10%;
-}
-.introduction-container {
-    display: flex;
-    flex-direction: column;
     background-color: #f6f4f1;
     justify-content: center;
     align-items: center;
-    height: 100%;
+    height: 60%;
+    margin-bottom: 5%;
 }
 .introduction {
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    height: 100%;
     width: 60%;
 }
 .start {
@@ -64,3 +77,75 @@ main {
     font-size: 2.0rem;
     margin-top: 10%;
 }
+/*
+---
+End Main Section
+---
+*/
+/*
+---
+Start Works Section: Styling of section showcasing works.
+---
+*/
+.works-container {
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 70%;
+    margin-top: 5%;
+}
+.work-section > img{
+    width: 100%; 
+    height: auto;
+}
+
+.work-info {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 50%;
+}
+.work-info > h2 {
+    text-wrap: nowrap;
+}
+.details > p {
+    font-size: .8rem;
+}
+/*
+---
+End Works Section
+---
+*/
+/*
+---
+Start Connect Section: The last part of the main page
+---
+*/
+hr {
+    width: 80%;
+}
+.connect {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 40%;
+    height: 80%;
+    margin: 0 auto;
+    text-align: center;
+    font-size: .9rem;
+}
+.connect a {
+    color: orange;
+    text-decoration: underline;
+}
+/*
+---
+End Connect Section
+---
+*/
+/*
+---
+Start Footer Section: Last part of the page
+---
+*/
