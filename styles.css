@@ -1,19 +1,17 @@
 /*
 ---
+index.html
 Start Default Styling: bypass browser default and set page's sizings
 ---
 */
-html{
-    height: 100dvh;
-    width: 100dvw;
-}
-body {
-    height: 100vh;
-    width: 100vw;
+html, body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    min-width: 100vw;
     margin: 0;
     padding: 0;
     box-sizing: content-box;
-    font-family: Courier, monospace;
     overflow-x: hidden;
 }
 /*
@@ -35,9 +33,12 @@ header {
     flex-direction: row;
     align-items: center;
     justify-content: space-evenly;
+    position: fixed;
     gap: 20%;
     background-color: #f6f4f1;
-    top: 0;
+}
+.background {
+    background-color: #f6f4f1;
 }
 .work {
     border-bottom: 1px black solid;
@@ -55,6 +56,7 @@ a{
     color: #000000;
 }
 main {
+    margin-top: 5%;
     display: flex;
     flex-direction: column;
     background-color: #f6f4f1;
@@ -64,6 +66,7 @@ main {
     margin-bottom: 5%;
 }
 .introduction {
+    padding: 5%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -128,12 +131,13 @@ hr {
 .connect {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    align-items: center;
     width: 40%;
     height: 80%;
     margin: 0 auto;
     text-align: center;
     font-size: .9rem;
+    margin-top: 15%;
 }
 .connect a {
     color: orange;
@@ -147,5 +151,22 @@ End Connect Section
 /*
 ---
 Start Footer Section: Last part of the page
+---
+*/
+footer {
+    display: flex;
+    border-top: 1px gray solid;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 80px;
+    width: 80%;
+    margin: 0 auto;
+    margin-top: 15%;
+    flex: 0;
+}
+/*
+---
+End Footer
 ---
 */
