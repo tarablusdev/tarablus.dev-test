@@ -14,12 +14,14 @@ body {
 header {
     height: 10%;
     width: 100%;
+    position: sticky;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-evenly;
     gap: 20%;
     background-color: #f6f4f1;
+    top: 0;
 }
 .work {
     border-bottom: 1px black solid;
@@ -39,10 +41,16 @@ ul {
 main {
     display: flex;
     flex-direction: column;
+    height: 70vh;
+    gap: 10%;
+}
+.introduction-container {
+    display: flex;
+    flex-direction: column;
     background-color: #f6f4f1;
     justify-content: center;
     align-items: center;
-    height: 70%;
+    height: 100%;
 }
 .introduction {
     display: flex;
