@@ -60,8 +60,7 @@ nav .burger-menu {
         left: 0%
     }
 }
-.mobile
-li {
+.mobile-nav li {
     list-style: none;
 }
 .hidden {
