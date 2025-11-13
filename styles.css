@@ -4,7 +4,11 @@ index.html
 Start Default Styling: bypass browser default and set page's sizings
 ---
 */
-html, body {
+html {
+    min-height: 100dvh;
+    min-width: 100dvw;   
+}
+body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
@@ -26,9 +30,8 @@ Main Section: Styling of main section including including header and introductio
 ---
 */
 header {
-    height: 10%;
+    height: 50px;
     width: 100%;
-    position: sticky;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -179,5 +182,68 @@ End Footer
 about.html
 ---
 Main Section: Style the main section of the page
+---
+*/
+.main-about {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 5%;
+}
+.main-about > section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    height: auto;
+    margin-top: 50px;
+    gap: 5%;
+}
+.about-details > img{
+    height: 10rem;
+    width: auto;
+    flex: 1;
+}
+.about-details {
+    display: flex;
+    gap: 10%;
+}
+.main-about button {
+    margin-top: 3%;
+    padding: 2%;
+    background-color: #FFFFFF;
+    border-radius: 20px;
+    color: orangered;
+    border: 2px orangered solid;
+}
+/*
+---
+End Main Section
+---
+*/
+/*
+---
+Start Toolkit Section: Mention All Kit Available
+---
+*/
+.toolkit {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    height: 50%;
+    background-color: #f6f4f1;
+    padding: 5% 0 5% 0;
+    gap: 10%;
+}
+/*
+---
+End Toolkit
 ---
 */
