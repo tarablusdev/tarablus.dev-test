@@ -30,9 +30,8 @@ Main Section: Styling of main section including including header and introductio
 ---
 */
 header {
-    height: 10%;
+    height: 50px;
     width: 100%;
-    position: sticky;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -188,29 +187,32 @@ Main Section: Style the main section of the page
 .main-about {
     display: flex;
     flex-direction: column;
+    height: 100%;
+    width: 100%;
     align-items: center;
     justify-content: center;
-    padding-top: 2%;
     margin-bottom: 5%;
 }
-.main-section {
+.main-about > section {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     width: 50%;
-    margin-top: 100px;
+    height: auto;
+    margin-top: 50px;
     gap: 5%;
 }
 .about-details > img{
     height: 10rem;
     width: auto;
+    flex: 1;
 }
 .about-details {
     display: flex;
     gap: 10%;
 }
-.main-section button {
+.main-about button {
     margin-top: 3%;
     padding: 2%;
     background-color: #FFFFFF;
