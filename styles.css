@@ -15,8 +15,9 @@ body {
     min-width: 100vw;
     margin: 0;
     padding: 0;
-    box-sizing: content-box;
+    box-sizing: border-box;
     overflow-x: hidden;
+    padding-top: 50px;
 }
 /*
 ---
@@ -29,6 +30,14 @@ End Default Styling
 Main Section: Styling of main section including including header and introduction banner
 ---
 */
+/* @media screen and (max-width: 660px) {
+  .nav-item {
+    display: none;
+  }
+  .nav button {
+    display: block;
+  }
+} */
 header {
     height: 50px;
     width: 100%;
@@ -38,7 +47,11 @@ header {
     justify-content: space-evenly;
     position: fixed;
     gap: 20%;
+    top: 0;
     background-color: #f6f4f1;
+}
+.nav button{
+    display: none;
 }
 .background {
     background-color: #f6f4f1;
