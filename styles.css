@@ -47,12 +47,35 @@ nav .burger-menu {
     font-size: 1.5rem;
     position: fixed;
     background-color: #f6f4f1;
+    left: 100%;
+    animation: appearing-menu 0.2s forwards;
 }
+@keyframes appearing-menu {
+    from {
+        visibility: visible;
+        left: 100%;
+    }
+    to {
+        visibility: visible;
+        left: 0%
+    }
+}
+.mobile
 li {
     list-style: none;
 }
 .hidden {
-    display: none;
+    animation: disappearing-menu 0.2s forwards;
+}
+@keyframes disappearing-menu {
+    from {
+        visibility: visible;
+        left: 0;
+    }
+    to {
+        visibility: visible;
+        left: 110%
+    }
 }
 .work-info {
     display: flex;
