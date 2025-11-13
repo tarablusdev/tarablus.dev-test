@@ -30,14 +30,14 @@ End Default Styling
 Main Section: Styling of main section including including header and introduction banner
 ---
 */
-/* @media screen and (max-width: 660px) {
+@media screen and (max-width: 660px) {
   .nav-item {
     display: none;
   }
-  .nav button {
-    display: block;
+  .nav > button {
+    display: flex;
   }
-} */
+}
 header {
     height: 50px;
     width: 100%;
@@ -211,8 +211,7 @@ Main Section: Style the main section of the page
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 50%;
-    height: auto;
+    width: 55%;
     margin-top: 50px;
     gap: 5%;
 }
