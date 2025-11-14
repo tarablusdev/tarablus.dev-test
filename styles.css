@@ -38,7 +38,7 @@ Start Responsive Elements: Elements that change properties based on screen width
     }
 
     nav .burger-menu {
-        display: inline-block;
+        display: block;
     }
 
     .mobile-nav {
