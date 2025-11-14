@@ -42,10 +42,6 @@ Start Responsive Elements: Elements that change properties based on screen width
     }
 
     .mobile-nav {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
         width: 100vw;
         height: 20vh;
         border: 1px black solid;
@@ -55,7 +51,12 @@ Start Responsive Elements: Elements that change properties based on screen width
         left: 100%;
         animation: appearing-menu 0.2s forwards;
     }
-
+    .mobile-nav ul {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
     @keyframes appearing-menu {
         from {
             visibility: visible;
@@ -68,7 +69,7 @@ Start Responsive Elements: Elements that change properties based on screen width
         }
     }
 
-    .mobile-nav li {
+    .mobile-nav ul li {
         list-style: none;
     }
 
@@ -218,13 +219,18 @@ a {
 }
 
 .introduction {
-    padding: 5%;
+    padding: 3%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     height: 100%;
     width: 60%;
-    padding-top: 50px;
+}
+
+.introduction a {
+    font-size: 3.0rem;
+    margin: 0 auto;
+    margin-top: 5%;
 }
 
 .start {
