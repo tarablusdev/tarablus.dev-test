@@ -6,8 +6,9 @@ Start Default Styling: bypass browser default and set page's sizings
 */
 html {
     min-height: 100dvh;
-    min-width: 100dvw;   
+    min-width: 100dvw;
 }
+
 body {
     display: flex;
     flex-direction: column;
@@ -19,118 +20,148 @@ body {
     overflow-x: hidden;
     padding-top: 50px;
 }
+
 /*
 ---
 End Default Styling
 ---
 */
+
+/*
+---
+Start Responsive Elements: Elements that change properties based on screen width
+---
+*/
+@media screen and (max-width: 660px) {
+    .nav-item {
+        display: none;
+    }
+
+    nav .burger-menu {
+        display: inline-block;
+    }
+
+    .mobile-nav {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100vw;
+        height: 20vh;
+        border: 1px black solid;
+        font-size: 1.5rem;
+        position: fixed;
+        background-color: #f6f4f1;
+        left: 100%;
+        animation: appearing-menu 0.2s forwards;
+    }
+
+    @keyframes appearing-menu {
+        from {
+            visibility: visible;
+            left: 100%;
+        }
+
+        to {
+            visibility: visible;
+            left: 0%
+        }
+    }
+
+    .mobile-nav li {
+        list-style: none;
+    }
+
+    .hidden {
+        animation: disappearing-menu 0.2s forwards;
+    }
+
+    @keyframes disappearing-menu {
+        from {
+            visibility: visible;
+            left: 0;
+        }
+
+        to {
+            visibility: visible;
+            left: 110%
+        }
+    }
+
+    .work-info {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+
+    .about-details {
+        display: flex;
+        flex-direction: column;
+        gap: 10%;
+    }
+
+    .toolkit {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        width: 100%;
+        height: 50%;
+        background-color: #f6f4f1;
+        padding: 5% 0 5% 0;
+        gap: 10%;
+    }
+}
+
+@media screen and (min-width: 661px) {
+    .burger-menu {
+        display: none;
+    }
+
+    .mobile-nav {
+        display: none;
+    }
+
+    .work-info {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        gap: 50%;
+    }
+
+    .about-details {
+        display: flex;
+        gap: 10%;
+    }
+
+    .toolkit {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        width: 100%;
+        height: 50%;
+        background-color: #f6f4f1;
+        padding: 5% 0 5% 0;
+        gap: 10%;
+    }
+}
+
+/*
+---
+End Responsive Elements
+---
+*/
+
 /*
 ---
 Main Section: Styling of main section including including header and introduction banner
 ---
 */
-@media screen and (max-width: 660px) {
-.nav-item {
-    display: none;
-}
-nav .burger-menu {
-    display: inline-block;
-}
-.mobile-nav {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    width: 100vw;
-    height: 20vh;
-    border: 1px black solid;
-    font-size: 1.5rem;
-    position: fixed;
-    background-color: #f6f4f1;
-    left: 100%;
-    animation: appearing-menu 0.2s forwards;
-}
-@keyframes appearing-menu {
-    from {
-        visibility: visible;
-        left: 100%;
-    }
-    to {
-        visibility: visible;
-        left: 0%
-    }
-}
-.mobile-nav li {
-    list-style: none;
-}
-.hidden {
-    animation: disappearing-menu 0.2s forwards;
-}
-@keyframes disappearing-menu {
-    from {
-        visibility: visible;
-        left: 0;
-    }
-    to {
-        visibility: visible;
-        left: 110%
-    }
-}
-.work-info {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-}
-.about-details {
-display: flex;
-flex-direction: column;
-gap: 10%;
-}
-.toolkit {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    width: 100%;
-    height: 50%;
-    background-color: #f6f4f1;
-    padding: 5% 0 5% 0;
-    gap: 10%;
-}
-}
-@media screen and (min-width: 661px) {
- .burger-menu {
-    display: none;
-}
-.mobile-nav {
-    display: none;
-}
-.work-info {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    gap: 50%;
-}
-.about-details {
-display: flex;
-gap: 10%;
-}
-.toolkit {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    width: 100%;
-    height: 50%;
-    background-color: #f6f4f1;
-    padding: 5% 0 5% 0;
-    gap: 10%;
-}
-}
 header {
     height: 50px;
     width: 100%;
@@ -143,31 +174,39 @@ header {
     top: 0;
     background-color: #f6f4f1;
 }
-.nav button{
+
+.nav button {
     display: none;
 }
+
 .background {
     background-color: #f6f4f1;
 }
+
 .work {
     border-bottom: 1px black solid;
 }
+
 .about {
     border-bottom: 1px black solid;
 }
+
 .main-name {
     font-size: 1.5rem;
 }
+
 ul {
     display: flex;
     list-style: none;
     gap: 10%;
 }
-a{
+
+a {
     text-decoration: none;
     color: #000000;
 }
-.background > main {
+
+.background>main {
     margin-top: 5%;
     display: flex;
     flex-direction: column;
@@ -177,6 +216,7 @@ a{
     height: 60%;
     margin-bottom: 5%;
 }
+
 .introduction {
     padding: 5%;
     display: flex;
@@ -186,6 +226,7 @@ a{
     width: 60%;
     padding-top: 50px;
 }
+
 .start {
     border: none;
     background-color: #f6f4f1;
@@ -193,11 +234,13 @@ a{
     font-size: 2.0rem;
     margin-top: 10%;
 }
+
 /*
 ---
 End Main Section
 ---
 */
+
 /*
 ---
 Start Works Section: Styling of section showcasing works.
@@ -211,21 +254,26 @@ Start Works Section: Styling of section showcasing works.
     width: 70%;
     margin-top: 5%;
 }
-.work-section > img{
-    width: 100%; 
+
+.work-section>img {
+    width: 100%;
     height: auto;
 }
-.work-info > h2 {
+
+.work-info>h2 {
     text-wrap: nowrap;
 }
-.details > p {
+
+.details>p {
     font-size: .8rem;
 }
+
 /*
 ---
 End Works Section
 ---
 */
+
 /*
 ---
 Start Connect Section: The last part of the main page
@@ -234,6 +282,7 @@ Start Connect Section: The last part of the main page
 hr {
     width: 80%;
 }
+
 .connect {
     display: flex;
     flex-direction: column;
@@ -245,15 +294,18 @@ hr {
     font-size: .9rem;
     margin-top: 15%;
 }
+
 .connect a {
     color: orange;
     text-decoration: underline;
 }
+
 /*
 ---
 End Connect Section
 ---
 */
+
 /*
 ---
 Start Footer Section: Last part of the page
@@ -271,11 +323,13 @@ footer {
     margin-top: 15%;
     flex: 0;
 }
+
 /*
 ---
 End Footer
 ---
 */
+
 
 /*
 about.html
@@ -292,7 +346,8 @@ Main Section: Style the main section of the page
     justify-content: center;
     margin-bottom: 5%;
 }
-.main-about > section {
+
+.main-about>section {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -301,11 +356,13 @@ Main Section: Style the main section of the page
     margin-top: 50px;
     gap: 5%;
 }
-.about-details > img{
+
+.about-details>img {
     height: 10rem;
     width: auto;
     flex: 1;
 }
+
 .main-about button {
     margin-top: 3%;
     padding: 2%;
@@ -314,6 +371,7 @@ Main Section: Style the main section of the page
     color: orangered;
     border: 2px orangered solid;
 }
+
 /*
 ---
 End Main Section
